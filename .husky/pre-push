@@ -1,0 +1,7 @@
+npx --no-install lint-staged
+npm run test:deploy --findRelatedTests --bail
+npm run build  # Substitua isso pelo comando de construção real que você está usando
+if [ $? -ne 0 ]; then
+  echo "A construção falhou. Não é possível fazer push."
+  exit 1
+fi

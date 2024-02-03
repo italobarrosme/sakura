@@ -8,7 +8,6 @@ const withPWA = require('next-pwa')({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   ...withPWA,
-  reactStrictMode: true,
   publicRuntimeConfig: {
     API_URL: process.env.API_URL,
     JWT_SECRET: process.env.JWT_SECRET,

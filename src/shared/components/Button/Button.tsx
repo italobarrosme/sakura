@@ -5,11 +5,11 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 import { tv, VariantProps } from 'tailwind-variants'
 
 const buttonVariantStyle = tv({
-  base: 'flex items-center gap-4 whitespace-nowrap rounded bg-brand-primary px-4 py-2 font-bold text-white hover:bg-brand-secondary',
+  base: 'flex justify-center gap-4 whitespace-nowrap rounded-2xl bg-brand-primary font-bold text-white hover:bg-brand-secondary',
   variants: {
     color: {
-      primary: 'bg-brand-primary hover:bg-brand-secondary',
-      secondary: 'bg-brand-secondary hover:bg-brand-primary',
+      primary: 'bg-brand-primary hover:bg-brand-primary/80',
+      secondary: 'bg-brand-secondary hover:bg-brand-secondary/30',
       danger: 'bg-red-500 hover:bg-red-600',
     },
     size: {
@@ -31,6 +31,7 @@ export type ButtonProps = {
   icon?: string
   children: ReactNode
   variant?: ButtonVariantsProps
+  isLoading?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 export const Button = ({
@@ -38,6 +39,7 @@ export const Button = ({
   type,
   icon = '',
   children,
+  isLoading,
   variant,
   ...props
 }: ButtonProps) => {
@@ -48,7 +50,7 @@ export const Button = ({
       {...props}
     >
       {icon ? <Icon icon={icon} width={24} /> : null}
-      {children}
+      {isLoading ? 'Carregando...' : children}
     </button>
   )
 }

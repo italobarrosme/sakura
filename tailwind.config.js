@@ -17,10 +17,9 @@ module.exports = {
         brand: {
           dark: '#030826',
           light: '#fffef3',
-          primary: '#F27141',
-          secondary: '#F28B30',
-          soft: '#F28D77',
-          accent: '#F24C27',
+          primary: '#fca311',
+          secondary: '#664b7C',
+          accent: '#FFD700',
         },
         transparent: 'transparent',
       },

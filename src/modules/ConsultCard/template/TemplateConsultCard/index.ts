@@ -1,0 +1,1 @@
+export { TemplateConsultCard } from './TemplateConsultCard'

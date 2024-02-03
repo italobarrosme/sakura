@@ -7,7 +7,6 @@ export default function middleware(req: NextRequest) {
 
   const { pathname } = req.nextUrl
 
-  // Example of redirecting to / if the cookie is not set
   if (!cookie && pathname !== '/') {
     req.nextUrl.pathname = '/'
     return NextResponse.redirect(req.nextUrl)

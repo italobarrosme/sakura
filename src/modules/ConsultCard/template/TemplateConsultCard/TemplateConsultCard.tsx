@@ -24,7 +24,6 @@ export const TemplateConsultCard = () => {
         </Button>
         <Card
           category={CardData.category}
-          difficulty={CardData.difficulty}
           hints={CardData.hints}
           wordCard={CardData.wordCard}
         />
